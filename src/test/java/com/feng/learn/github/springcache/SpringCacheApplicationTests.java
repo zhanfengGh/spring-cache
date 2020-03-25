@@ -21,7 +21,7 @@ class SpringCacheApplicationTests {
 
     @Test
     @Timeout(11) // 要求方法在 11s 内完成
-    void givenNoCache_whenCallService_thenMethodUse10Seconds() {
+    void givenCache_whenCallServiceTwice_thenMethodUseCache() {
         SomeModel model1 = someService.getFromRepository(1L);
         SomeModel model2 = someService.getFromRepository(1L);
         assertThat(model1).isEqualTo(model2).isSameAs(model2);

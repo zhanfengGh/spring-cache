@@ -8,6 +8,9 @@ import com.feng.learn.github.springcache.domain.model.SomeModel;
  */
 public interface SomeRepository {
 
-
     SomeModel getById(Long id);
+
+    int updateById(SomeModel someModel);
+
+    int deleteById(SomeModel someModel);
 }
