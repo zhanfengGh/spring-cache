@@ -1,5 +1,6 @@
 package com.feng.learn.github.springcache.infrastructure.mybatisplus;
 
+import static com.feng.learn.github.springcache.domain.repository.SomeRepository.DEFAULT_IMPL;
 import static com.feng.learn.github.springcache.infrastructure.spring.cache.SpringCacheConfig.JVM_CACHE_MANAGE;
 
 import com.feng.learn.github.springcache.domain.model.SomeModel;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Repository;
  * @author zhanfeng.zhang
  * @date 2020/03/25
  */
-@Repository
+@Repository(DEFAULT_IMPL)
 @CacheConfig(cacheNames = {"someCache"}, cacheManager = JVM_CACHE_MANAGE)
 public class SomeRepositoryImpl implements SomeRepository {
 

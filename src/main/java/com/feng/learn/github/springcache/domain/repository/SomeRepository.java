@@ -8,6 +8,8 @@ import com.feng.learn.github.springcache.domain.model.SomeModel;
  */
 public interface SomeRepository {
 
+    String DEFAULT_IMPL = "defaultSomeRepositoryImpl";
+
     SomeModel getById(Long id);
 
     int updateById(SomeModel someModel);

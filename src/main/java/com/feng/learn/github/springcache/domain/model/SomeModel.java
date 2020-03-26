@@ -1,5 +1,6 @@
 package com.feng.learn.github.springcache.domain.model;
 
+import java.io.Serializable;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @RequiredArgsConstructor
 @Accessors(chain = true)
-public class SomeModel {
+public class SomeModel implements Serializable {
 
     final Long id;
     String name;
