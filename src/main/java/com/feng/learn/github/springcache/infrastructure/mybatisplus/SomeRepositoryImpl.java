@@ -1,8 +1,5 @@
 package com.feng.learn.github.springcache.infrastructure.mybatisplus;
 
-import static com.feng.learn.github.springcache.domain.repository.SomeRepository.DEFAULT_IMPL;
-import static com.feng.learn.github.springcache.infrastructure.spring.cache.SpringCacheConfig.JVM_CACHE_MANAGE;
-
 import com.feng.learn.github.springcache.domain.model.SomeModel;
 import com.feng.learn.github.springcache.domain.repository.SomeRepository;
 import org.springframework.cache.annotation.CacheConfig;
@@ -10,6 +7,9 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
+
+import static com.feng.learn.github.springcache.domain.repository.SomeRepository.DEFAULT_IMPL;
+import static com.feng.learn.github.springcache.infrastructure.spring.cache.SpringCacheConfig.JVM_CACHE_MANAGE;
 
 /**
  * @author zhanfeng.zhang
@@ -31,18 +31,23 @@ public class SomeRepositoryImpl implements SomeRepository {
         return new SomeModel(id).setName("someModel");
     }
 
-    @CachePut(cacheNames = {"someCache", "anotherCache"},
-        key = "'/sm/' + #root.args[0]")
+    @CachePut(
+            cacheNames = {"someCache", "anotherCache"},
+            key = "'/sm/' + #root.args[0]"
+    )
     @Override
     public int updateById(SomeModel someModel) {
         return 0;
     }
 
-    @CacheEvict(cacheManager = JVM_CACHE_MANAGE,
-        cacheNames = {"someCache", "anotherCache"},
-        key = "'/sm/' + #root.args[0]")
+    @CacheEvict(
+            cacheManager = JVM_CACHE_MANAGE,
+            cacheNames = {"someCache", "anotherCache"},
+            key = "'/sm/' + #root.args[0]"
+    )
     @Override
     public int deleteById(SomeModel someModel) {
         return 0;
     }
+
 }
