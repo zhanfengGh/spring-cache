@@ -14,9 +14,9 @@ import org.springframework.context.annotation.Configuration;
 @EnableCaching
 public class SpringCacheConfig {
 
-    public static final String JVM_CACHE_MANAGE = "jvmCacheManage";
+    public static final String JVM_MAP_CACHE_MANAGER = "jvmMapCacheManage";
 
-    @Bean(JVM_CACHE_MANAGE)
+    @Bean(JVM_MAP_CACHE_MANAGER)
     public CacheManager jvmCacheManager() {
         return new ConcurrentMapCacheManager();
     }

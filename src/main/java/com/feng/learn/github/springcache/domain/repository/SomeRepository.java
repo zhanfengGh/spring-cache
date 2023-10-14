@@ -9,6 +9,8 @@ import com.feng.learn.github.springcache.domain.model.SomeModel;
 public interface SomeRepository {
 
     String DEFAULT_IMPL = "defaultSomeRepositoryImpl";
+    String MAP_CACHE_IMPL = "mapCacheSomeRepositoryImpl";
+    String CAFFEINE_CACHE_IMPL = "caffeineCacheSomeRepositoryImpl";
 
     SomeModel getById(Long id);
 

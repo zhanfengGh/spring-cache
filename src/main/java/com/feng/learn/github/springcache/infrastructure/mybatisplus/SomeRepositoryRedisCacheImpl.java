@@ -9,14 +9,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Repository;
 
 /**
  * @author zhanfeng.zhang
  * @date 2020/03/26
  */
 @Primary
-@Repository
+// @Repository
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @CacheConfig(cacheNames = {"someCache"}, cacheManager = SpringRedisCacheConfig.REDIS_CACHE_MANAGE)
 public class SomeRepositoryRedisCacheImpl implements SomeRepository {
