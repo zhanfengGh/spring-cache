@@ -1,4 +1,4 @@
-package com.feng.learn.github.springcache.infrastructure.mybatisplus;
+package com.feng.learn.github.springcache.infra.mysql;
 
 import com.feng.learn.github.springcache.domain.model.SomeModel;
 import com.feng.learn.github.springcache.domain.repository.SomeRepository;

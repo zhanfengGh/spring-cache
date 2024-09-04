@@ -1,8 +1,8 @@
-package com.feng.learn.github.springcache.infrastructure.mybatisplus;
+package com.feng.learn.github.springcache.infra.mysql;
 
 import com.feng.learn.github.springcache.domain.model.SomeModel;
 import com.feng.learn.github.springcache.domain.repository.SomeRepository;
-import com.feng.learn.github.springcache.infrastructure.spring.cache.SpringRedisCacheConfig;
+import com.feng.learn.github.springcache.infra.spring.cache.SpringRedisCacheConfig;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Qualifier;

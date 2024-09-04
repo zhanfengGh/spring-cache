@@ -1,4 +1,4 @@
-package com.feng.learn.github.springcache.infrastructure.spring.cache;
+package com.feng.learn.github.springcache.infra.spring.cache;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;

@@ -1,4 +1,4 @@
-package com.feng.learn.github.springcache.infrastructure.spring.cache;
+package com.feng.learn.github.springcache.infra.spring.cache;
 
 import com.github.benmanes.caffeine.cache.CaffeineSpec;
 import org.springframework.cache.CacheManager;

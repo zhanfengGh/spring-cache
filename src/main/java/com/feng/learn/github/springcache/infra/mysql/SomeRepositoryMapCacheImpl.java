@@ -1,4 +1,4 @@
-package com.feng.learn.github.springcache.infrastructure.mybatisplus;
+package com.feng.learn.github.springcache.infra.mysql;
 
 import com.feng.learn.github.springcache.domain.model.SomeModel;
 import org.springframework.cache.annotation.CacheConfig;
@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import static com.feng.learn.github.springcache.domain.repository.SomeRepository.MAP_CACHE_IMPL;
-import static com.feng.learn.github.springcache.infrastructure.spring.cache.SpringCacheConfig.JVM_MAP_CACHE_MANAGER;
+import static com.feng.learn.github.springcache.infra.spring.cache.SpringCacheConfig.JVM_MAP_CACHE_MANAGER;
 
 @Repository(MAP_CACHE_IMPL)
 @CacheConfig(cacheNames = {"someCache"}, cacheManager = JVM_MAP_CACHE_MANAGER)

@@ -1,4 +1,4 @@
-package com.feng.learn.github.springcache.infrastructure.spring.cache;
+package com.feng.learn.github.springcache.infra.spring.cache;
 
 import com.feng.learn.github.springcache.domain.model.SomeModel;
 import com.feng.learn.github.springcache.domain.repository.SomeRepository;
